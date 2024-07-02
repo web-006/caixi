@@ -185,32 +185,31 @@
 				transform: translateY(-50%);
 				transition: width 0.3s ease-out;
 			}
-			
-			
+
+
 			.game-container {
-			    position: relative;
+				position: relative;
 			}
-			
+
 			.title {
-			    position: absolute;
-			    top: 20px;
-			    left: 50%;
-			    transform: translateX(-50%);
-			    font-size: 60px;
-			    color: #8B4513;
-				text-shadow: -1px -1px 0 #000;
-			}
-			
-			.instructions {
-			    position: absolute;
-			    top: 570px;
-			    left: 50%;
-			    transform: translateX(-50%);
-			    font-size: 30px;
-			    color: #8B4513;
+				position: absolute;
+				top: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 60px;
+				color: #8B4513;
 				text-shadow: -1px -1px 0 #000;
 			}
 
+			.instructions {
+				position: absolute;
+				top: 570px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 30px;
+				color: #8B4513;
+				text-shadow: -1px -1px 0 #000;
+			}
 		</style>
 	</head>
 	<body>
@@ -222,124 +221,145 @@
 			<a href="xiangcai2.html">详细</a>
 			<a href="xiangcai3" class="current">互动小游戏</a>
 		</div>
-		
+
 		<div class="game-container">
-		    <div class="title">湘菜连连看</div>
-		    <div class="instructions">请将展示的湘菜图片拖动到正确的菜名上进行连接</div>
-		    <!-- 这里放置你的湘菜图片与菜名的拖拽匹配游戏的具体内容 -->
+			<div class="title">湘菜连连看</div>
+			<div class="instructions">请将展示的湘菜图片拖动到正确的菜名上进行连接</div>
+			<!-- 这里放置你的湘菜图片与菜名的拖拽匹配游戏的具体内容 -->
 		</div>
 
 		<!-- 游戏内容区域 -->
-		<div class="content">
-			<div class="page active" id="game-page">
-				<div class="images">
-					<img src="img/changdemifen.png" id="changdemifen" draggable="true" ondragstart="drag(event)"
-						data-img="changdemifen">
-					<img src="img/donganziji.png" id="donganziji" draggable="true" ondragstart="drag(event)"
-						data-img="donganziji">
-					<img src="img/duojiaoyutou.png" id="duojiaoyutou" draggable="true" ondragstart="drag(event)"
-						data-img="duojiaoyutou">
-					<img src="img/hengyangyufen.png" id="hengyangyufen" draggable="true" ondragstart="drag(event)"
-						data-img="hengyangyufen">
-					<img src="img/jiangbanya.png" id="jiangbanya" draggable="true" ondragstart="drag(event)"
-						data-img="jiangbanya">
-					<img src="img/laweihezheng.png" id="laweihezheng" draggable="true" ondragstart="drag(event)"
-						data-img="laweihezheng">
-					<!-- 添加更多图片 -->
-				</div>
-				<div class="names" id="names-container">
-					<div class="name" data-img="changdemifen" ondrop="drop(event)" ondragover="allowDrop(event)">常德米粉
-					</div>
-					<div class="name" data-img="donganziji" ondrop="drop(event)" ondragover="allowDrop(event)">东安子鸡
-					</div>
-					<div class="name" data-img="duojiaoyutou" ondrop="drop(event)" ondragover="allowDrop(event)">剁椒鱼头
-					</div>
-					<div class="name" data-img="hengyangyufen" ondrop="drop(event)" ondragover="allowDrop(event)">衡阳渔粉
-					</div>
-					<div class="name" data-img="jiangbanya" ondrop="drop(event)" ondragover="allowDrop(event)">酱板鸭</div>
-					<div class="name" data-img="laweihezheng" ondrop="drop(event)" ondragover="allowDrop(event)">腊味合蒸
-					</div>
-					<!-- 添加更多菜名 -->
-				</div>
-				<!-- 连接线条 -->
-				<svg id="svg-container"
-					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></svg>
-			</div>
-		</div>
+		        <div class="content">
+		            <div class="page active" id="game-page">
+		                <div class="images">
+		                    <img src="img/changdemifen.png" id="changdemifen" draggable="true" ondragstart="drag(event)"
+		                        data-img="changdemifen">
+		                    <img src="img/donganziji.png" id="donganziji" draggable="true" ondragstart="drag(event)"
+		                        data-img="donganziji">
+		                    <img src="img/duojiaoyutou.png" id="duojiaoyutou" draggable="true" ondragstart="drag(event)"
+		                        data-img="duojiaoyutou">
+		                    <img src="img/hengyangyufen.png" id="hengyangyufen" draggable="true" ondragstart="drag(event)"
+		                        data-img="hengyangyufen">
+		                    <img src="img/jiangbanya.png" id="jiangbanya" draggable="true" ondragstart="drag(event)"
+		                        data-img="jiangbanya">
+		                    <img src="img/laweihezheng.png" id="laweihezheng" draggable="true" ondragstart="drag(event)"
+		                        data-img="laweihezheng">
+		                    <!-- 添加更多图片 -->
+		                </div>
+		                <div class="names" id="names-container">
+		                    <div class="name" data-img="changdemifen" ondrop="drop(event)" ondragover="allowDrop(event)">常德米粉
+		                    </div>
+		                    <div class="name" data-img="donganziji" ondrop="drop(event)" ondragover="allowDrop(event)">东安子鸡
+		                    </div>
+		                    <div class="name" data-img="duojiaoyutou" ondrop="drop(event)" ondragover="allowDrop(event)">剁椒鱼头
+		                    </div>
+		                    <div class="name" data-img="hengyangyufen" ondrop="drop(event)" ondragover="allowDrop(event)">衡阳渔粉
+		                    </div>
+		                    <div class="name" data-img="jiangbanya" ondrop="drop(event)" ondragover="allowDrop(event)">酱板鸭</div>
+		                    <div class="name" data-img="laweihezheng" ondrop="drop(event)" ondragover="allowDrop(event)">腊味合蒸
+		                    </div>
+		                    <!-- 添加更多菜名 -->
+		                </div>
+		                <!-- 连接线条 -->
+		                <svg id="svg-container"
+		                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></svg>
+		            </div>
+		        </div>
+		
+		        <script>
+		            function allowDrop(event) {
+		                event.preventDefault();
+		            }
+		
+		            function drag(event) {
+		                event.dataTransfer.setData("text", event.target.id);
+		            }
+		
+		            function drop(event) {
+		                event.preventDefault();
+		                var data = event.dataTransfer.getData("text");
+		                var draggedImg = document.getElementById(data);
+		                var dropTarget = event.target;
+		
+		                // 检查匹配
+		                if (draggedImg.getAttribute('data-img') === dropTarget.getAttribute('data-img')) {
+		                    draggedImg.style.opacity = '0.5'; // 匹配成功，透明化图片
+		                    dropTarget.style.backgroundColor = '#D6E9CA'; // 匹配成功，修改背景色
+		
+		                    // 创建连接线
+		                    drawConnector(draggedImg, dropTarget);
+		                } else {
+		                    // 匹配失败处理（可选）
+		                }
+		            }
 
-		<script>
-			function allowDrop(event) {
-				event.preventDefault();
-			}
-
-			function drag(event) {
-				event.dataTransfer.setData("text", event.target.id);
-			}
-
-			function drop(event) {
-				event.preventDefault();
-				var data = event.dataTransfer.getData("text");
-				var draggedImg = document.getElementById(data);
-				var dropTarget = event.target;
-
-				// 检查匹配
-				if (draggedImg.getAttribute('data-img') === dropTarget.getAttribute('data-img')) {
-					draggedImg.style.opacity = '0.5'; // 匹配成功，透明化图片
-					dropTarget.style.backgroundColor = '#D6E9CA'; // 匹配成功，修改背景色
-
-					// 创建连接线
-					drawConnector(draggedImg, dropTarget);
-				} else {
-					// 匹配失败处理（可选）
-				}
-			}
-
-
-
-			function drawConnector(imgElem, nameElem) {
-				var svgContainer = document.getElementById('svg-container');
-
-				// 获取图片和名称的中心坐标
-				var imgRect = imgElem.getBoundingClientRect();
-				var nameRect = nameElem.getBoundingClientRect();
-				var imgCenterX = imgRect.left + imgRect.width / 2;
-				var imgCenterY = imgRect.top + imgRect.height / 2;
-				var nameCenterX = nameRect.left + nameRect.width / 2;
-				var nameCenterY = nameRect.top + nameRect.height / 2;
-
-				// 创建SVG线条元素
-				var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-				line.setAttribute('x1', imgCenterX);
-				line.setAttribute('y1', imgCenterY);
-				line.setAttribute('x2', nameCenterX);
-				line.setAttribute('y2', nameCenterY);
-				line.setAttribute('stroke', '#D6E9CA');
-				line.setAttribute('stroke-width', '2');
-
-				// 将线条添加到SVG容器中
-				svgContainer.appendChild(line);
-			}
+		            function drawConnector(imgElem, nameElem) {
+		                var svgContainer = document.getElementById('svg-container');
+		            
+		                // 获取图片和名称元素的中心坐标（视口坐标）
+		                var imgCenterX = getElementCenterX(imgElem);
+		                var imgCenterY = getElementCenterY(imgElem);
+		                var nameCenterX = getElementCenterX(nameElem);
+		                var nameCenterY = getElementCenterY(nameElem);
+		            
+		                // 创建SVG线条元素
+		                var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+		                line.setAttribute('x1', imgCenterX);
+		                line.setAttribute('y1', imgCenterY);
+		                line.setAttribute('x2', nameCenterX);
+		                line.setAttribute('y2', nameCenterY);
+		                line.setAttribute('stroke', '#D6E9CA');
+		                line.setAttribute('stroke-width', '2');
+		            
+		                // 将线条添加到SVG容器中
+		                svgContainer.appendChild(line);
+		            
+		                // 监听页面缩放事件，更新线条位置
+		                window.addEventListener('resize', function() {
+		                    var newImgCenterX = getElementCenterX(imgElem);
+		                    var newImgCenterY = getElementCenterY(imgElem);
+		                    var newNameCenterX = getElementCenterX(nameElem);
+		                    var newNameCenterY = getElementCenterY(nameElem);
+		            
+		                    // 更新线条的位置
+		                    line.setAttribute('x1', newImgCenterX);
+		                    line.setAttribute('y1', newImgCenterY);
+		                    line.setAttribute('x2', newNameCenterX);
+		                    line.setAttribute('y2', newNameCenterY);
+		                });
+		            }
+		            
+		            // 获取元素的中心X坐标（视口坐标）
+		            function getElementCenterX(elem) {
+		                var rect = elem.getBoundingClientRect();
+		                return rect.left + rect.width / 2;
+		            }
+		            
+		            // 获取元素的中心Y坐标（视口坐标）
+		            function getElementCenterY(elem) {
+		                var rect = elem.getBoundingClientRect();
+		                return rect.top + rect.height / 2;
+		            }
 
 
-
-
-			// 获取菜名容器和菜名元素列表
-			var namesContainer = document.getElementById('names-container');
-			var namesList = Array.from(namesContainer.getElementsByClassName('name'));
-
-			// 随机排序菜名
-			namesList.sort(function() {
-				return Math.random() - 0.5;
-			});
-
-			// 清空原来的菜名容器
-			namesContainer.innerHTML = '';
-
-			// 重新添加随机排序后的菜名
-			namesList.forEach(function(name) {
-				namesContainer.appendChild(name);
-			});
-		</script>
+					 
+		            // 获取菜名容器和菜名元素列表
+		            var namesContainer = document.getElementById('names-container');
+		            var namesList = Array.from(namesContainer.getElementsByClassName('name'));
+		
+		            // 随机排序菜名
+		            namesList.sort(function() {
+		                return Math.random() - 0.5;
+		            });
+		
+		            // 清空原来的菜名容器
+		            namesContainer.innerHTML = '';
+		
+		            // 重新添加随机排序后的菜名
+		            namesList.forEach(function(name) {
+		                namesContainer.appendChild(name);
+		            });
+		        </script>
 
 	</body>
 </html>
